@@ -8,15 +8,21 @@
 
 namespace con = JadedHoboConsole;
 
+enum type_case
+{
+    PLEINE,
+    VIDE
+};
+
 struct plateau
 {
-    int grille[NB_LIGNES][NB_COLONNES];
+    type_case grille[NB_LIGNES][NB_COLONNES];
 };
 
 void afficher_regles();
-void initialiser_plateau();
-void afficher_plateau();
-void faire_jouer_un_coup();
+void initialiser_plateau(plateau *p);
+void afficher_plateau(plateau p);
+void faire_jouer_un_coup(plateau *p);
 
 class contenant
 {

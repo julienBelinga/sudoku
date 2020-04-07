@@ -4,6 +4,7 @@ contenant::contenant()
 {
 
 }
+
 void afficher_regles(){
     using std::cout;
     using std::endl;
@@ -16,4 +17,17 @@ void afficher_regles(){
          << "Au début du jeu, une vingtaine de chiffres sont déjà placés et il vous reste à trouver les autres."
          << " En effet, une grille initiale de sudoku correctement constituée ne peut aboutir qu'à une et une seule solution."
          << "Pour trouver les chiffres manquants, tout est une question de logique et d'observation." << endl;
+
+    cout << "les mauvaise réponses seront afficer en" << con::fg_red << "rouge" << con::fg_white <<
+          "et les bonnes resterons en blancs." << endl;
+}
+
+void initialiser_plateau(plateau *p){
+    for(int l = 0; l < NB_LIGNES; l++)
+            for(int c = 0; c < NB_COLONNES; c++)
+                p->grille[l][c] = VIDE;
+}
+
+void afficher_plateau(plateau p){
+
 }

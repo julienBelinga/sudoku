@@ -10,8 +10,7 @@ namespace con = JadedHoboConsole;
 
 enum type_case
 {
-    PLEINE,
-    VIDE
+    VIDE,c1,c2,c3,c4,c5,c6,c7,c8,c9
 };
 
 struct plateau
@@ -22,7 +21,8 @@ struct plateau
 void afficher_regles();
 void initialiser_plateau(plateau *p);
 void afficher_plateau(plateau p);
-void faire_jouer_un_coup(plateau *p);
+int faire_jouer_un_coup(plateau *p);
+bool verifier(plateau p);
 
 class contenant
 {
